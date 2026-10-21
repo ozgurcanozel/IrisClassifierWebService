@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iris Sınıflandırıcı</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🌸 Iris Sınıflandırıcı</h1>
+    <p class="sub">Çiçeğin ölçülerini gir, türünü tahmin edelim.</p>
+
+    <form id="form">
+      <label>Sepal Uzunluğu (cm)
+        <input type="number" step="0.1" min="0.1" name="sepal_length" value="5.1" required></label>
+      <label>Sepal Genişliği (cm)
+        <input type="number" step="0.1" min="0.1" name="sepal_width" value="3.5" required></label>
+      <label>Petal Uzunluğu (cm)
+        <input type="number" step="0.1" min="0.1" name="petal_length" value="1.4" required></label>
+      <label>Petal Genişliği (cm)
+        <input type="number" step="0.1" min="0.1" name="petal_width" value="0.2" required></label>
+      <button type="submit">Tahmin Et</button>
+    </form>
+
+    <section id="result" hidden>
+      <h2 id="pred"></h2>
+      <div id="bars"></div>
+    </section>
+    <p id="error" class="error" hidden></p>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
